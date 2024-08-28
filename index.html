@@ -12,31 +12,26 @@
             background-color: #f4f4f4;
             color: #333;
             display: flex;
-            justify-content: center;
-            align-items: center;
             min-height: 100vh;
-            text-align: center;
+            overflow-x: hidden;
         }
-        .container {
-            width: 100%;
-            max-width: 1200px; /* Limit max width for readability */
+        .sidebar {
+            width: 250px;
             padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .profile-section {
-            width: 100%;
+            background-color: #f4f4f4;
+            position: fixed;
+            left: 0;
+            top: 0;
+            bottom: 0;
             display: flex;
             flex-direction: column;
             align-items: center;
             text-align: center;
+            border-right: 1px solid #ddd;
         }
         .profile-picture {
-            width: 25vw; /* Width based on viewport */
-            height: 25vw; /* Height based on viewport */
-            max-width: 250px; /* Maximum size for large screens */
-            max-height: 250px; /* Maximum size for large screens */
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
@@ -44,7 +39,7 @@
         .social-links {
             display: flex;
             justify-content: center;
-            margin-top: 10px;
+            margin-bottom: 20px;
             width: 100%;
         }
         .social-links a {
@@ -56,7 +51,6 @@
             height: 30px;
         }
         .profile-links {
-            margin-top: 20px;
             width: 100%;
             display: flex;
             flex-direction: column;
@@ -66,21 +60,25 @@
             text-decoration: none;
             color: white;
             background-color: #0077b5;
-            padding: 10px 20px;
+            padding: 10px;
             margin-top: 10px;
-            font-size: 16px;
+            font-size: 14px;
             border-radius: 5px;
             transition: background-color 0.3s ease;
-            width: 50%; /* Button takes up half the container width */
-            max-width: 300px; /* Maximum size for large screens */
+            width: 80%; /* Adjust button width */
+            text-align: center;
         }
         .profile-links a:hover {
             background-color: #005f8a;
         }
+        .main-content {
+            margin-left: 270px; /* Sidebar width + padding */
+            padding: 20px;
+            flex: 1;
+        }
         .content {
-            width: 100%;
-            max-width: 800px;
-            margin-top: 20px;
+            max-width: 100%;
+            margin: 0 auto;
         }
         .bio {
             font-size: 18px;
@@ -90,46 +88,29 @@
             margin-top: 30px;
             font-size: 18px;
         }
-        @media (min-width: 768px) {
-            .container {
-                flex-direction: row;
-                align-items: flex-start;
-            }
-            .profile-section {
-                align-items: flex-start;
-                text-align: left;
-                margin-right: 20px;
-            }
-            .social-links {
-                justify-content: flex-start;
-            }
-            .content {
-                margin-top: 0;
-            }
-        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="profile-section">
-            <img src="images/20221202-DSC_1277-Edit.jpg" alt="Brent Murray" class="profile-picture">
-            <div class="social-links">
-                <a href="https://x.com/BrentAMurray" target="_blank">
-                    <img src="images/x-icon.png" alt="X">
-                </a>
-                <a href="https://ca.linkedin.com/in/brent-murray-8646141a5" target="_blank">
-                    <img src="images/linkedin-icon.png" alt="LinkedIn">
-                </a>
-                <a href="https://orcid.org/0000-0003-3053-9448" target="_blank">
-                    <img src="images/orcid-icon.png" alt="ORCID">
-                </a>
-            </div>
-            <div class="profile-links">
-                <a href="publications.html">Publications</a>
-                <a href="awards.html">Awards</a>
-                <a href="resume.html">Resume</a>
-            </div>
+    <div class="sidebar">
+        <img src="images/20221202-DSC_1277-Edit.jpg" alt="Brent Murray" class="profile-picture">
+        <div class="social-links">
+            <a href="https://x.com/BrentAMurray" target="_blank">
+                <img src="images/x-icon.png" alt="X">
+            </a>
+            <a href="https://ca.linkedin.com/in/brent-murray-8646141a5" target="_blank">
+                <img src="images/linkedin-icon.png" alt="LinkedIn">
+            </a>
+            <a href="https://orcid.org/0000-0003-3053-9448" target="_blank">
+                <img src="images/orcid-icon.png" alt="ORCID">
+            </a>
         </div>
+        <div class="profile-links">
+            <a href="publications.html">Publications</a>
+            <a href="awards.html">Awards</a>
+            <a href="resume.html">Resume</a>
+        </div>
+    </div>
+    <div class="main-content">
         <div class="content">
             <h1>Brent Murray</h1>
             <p class="bio">
