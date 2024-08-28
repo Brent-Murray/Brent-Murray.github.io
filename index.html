@@ -17,15 +17,22 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: left; /* Align text to the left */
         }
         .profile-picture {
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            margin-top: 20px;
+            margin-right: 20px; /* Space between image and text */
+        }
+        .content {
+            max-width: 600px;
         }
         .bio {
-            margin-top: 20px;
+            margin-top: 10px;
             font-size: 18px;
         }
         .links {
@@ -45,18 +52,20 @@
 <body>
     <div class="container">
         <img src="images/20221202-DSC_1277-Edit.jpg" alt="Brent Murray" class="profile-picture">
-        <h1>Brent Murray</h1>
-        <p class="bio">
-            Short bio about yourself. You can include your research interests, current position, and any other relevant information.
-        </p>
-        <div class="publication">
-            <h2>Recent Publication</h2>
-            <p><a href="https://www.sciencedirect.com/science/article/pii/S0924271623003453" target="_blank">Estimating tree species composition from airborne laser scanning data using point-based deep learning models</a></p>
-        </div>
-        <div class="links">
-            <a href="https://x.com/BrentAMurray" target="_blank">X</a>
-			<a href="https://ca.linkedin.com/in/brent-murray-8646141a5" target="_blank">LinkedIn</a>
-            <a href="https://orcid.org/0000-0003-3053-9448" target="_blank">ORCID</a>
+        <div class="content">
+            <h1>Brent Murray</h1>
+            <p class="bio">
+                Short bio about yourself. You can include your research interests, current position, and any other relevant information.
+            </p>
+            <div class="publication">
+                <h2>Recent Publication</h2>
+                <p><a href="https://www.sciencedirect.com/science/article/pii/S0924271623003453" target="_blank">Estimating tree species composition from airborne laser scanning data using point-based deep learning models</a></p>
+            </div>
+            <div class="links">
+                <a href="https://x.com/BrentAMurray" target="_blank">X</a>
+                <a href="https://ca.linkedin.com/in/brent-murray-8646141a5" target="_blank">LinkedIn</a>
+                <a href="https://orcid.org/0000-0003-3053-9448" target="_blank">ORCID</a>
+            </div>
         </div>
     </div>
 </body>
