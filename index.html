@@ -14,7 +14,7 @@
             display: flex;
             min-height: 100vh;
             overflow-x: hidden;
-            overflow-y: hidden; /* Prevent vertical scrolling on the body */
+            /* Remove overflow-y: hidden to allow vertical scrolling */
         }
         .sidebar {
             width: 400px; 
@@ -29,11 +29,11 @@
             align-items: center;
             text-align: center;
             border-right: none;
-            overflow-y: auto; /* Allow scrolling within the sidebar if needed */
+            min-height: 100vh; /* Ensure sidebar takes up full height */
         }
         .profile-picture {
             width: 300px; 
-            height: 300px;
+            height: auto; /* Maintain aspect ratio */
             border-radius: 50%;
             object-fit: cover;
             margin-bottom: 20px;
