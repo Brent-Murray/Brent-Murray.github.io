@@ -5,149 +5,188 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brent Murray - Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            min-height: 100vh;
-            overflow-x: hidden;
-        }
-        .navbar {
-            width: 100%;
-            background-color: #158cba;
-            display: flex;
-            align-items: center;
-            padding: 20px 40px; /* Align this padding with the main content */
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 1000;
-        }
-        .navbar .name {
-            font-size: 24px;
-            color: white;
-            margin-right: 30px;
-            line-height: 1.5;
-        }
-        .navbar a {
-            text-decoration: none;
-            color: white;
-            padding: 10px 20px;
-            margin: 0 15px;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            line-height: 1.5;
-        }
-        .navbar a:hover {
-            background-color: #0f6586;
-        }
-        .main-content {
-            margin-top: 100px; /* Adjust this value depending on the height of your navbar */
-            padding: 20px 40px; /* Align this padding with the navbar */
-            flex: 1;
-        }
-        .content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        ul {
-            list-style-type: none;
-            padding: 0;
-        }
-        ul li {
-            margin-bottom: 20px;
-        }
-        ul li a {
-            color: #0077b5;
-            text-decoration: none;
-        }
-        ul li a:hover {
-            text-decoration: underline;
-        }
-        h2 {
-            margin-top: 40px;
-            font-size: 24px;
-            color: #333;
-        }
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f4f4f4;
+			color: #333;
+			min-height: 100vh;
+			overflow-x: hidden;
+		}
+		.navbar {
+			width: 100%;
+			background-color: #158cba;
+			display: flex;
+			align-items: center;
+			padding: 20px 40px;
+			position: fixed;
+			top: 0;
+			left: 0;
+			z-index: 1000;
+		}
+		.navbar .name {
+			font-size: 24px;
+			color: white;
+			margin-right: 30px;
+			line-height: 1.5;
+		}
+		.navbar a {
+			text-decoration: none;
+			color: white;
+			padding: 10px 20px;
+			margin: 0 15px;
+			font-size: 18px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+			line-height: 1.5;
+		}
+		.navbar a:hover {
+			background-color: #0f6586;
+		}
+		.main-content {
+			margin-top: 100px;
+			padding: 20px 40px;
+			flex: 1;
+		}
+		.content {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+		.work-experience {
+			display: grid;
+			grid-template-columns: 150px 1fr; /* Fixed width for the year and flexible width for experience */
+			grid-gap: 20px;
+			margin-bottom: 20px;
+			align-items: center;
+			border-bottom: 1px solid #ccc;
+		}
+		.year {
+			font-size: 24px;
+			font-weight: bold;
+			color: #555;
+			text-align: left;
+			padding-right: 20px;
+		}
+		.experience-list ul {
+			padding-left: 0;
+			list-style-type: none;
+		}
+		ul li {
+			margin-bottom: 20px;
+		}
+		ul li strong {
+			color: #158cba;
+		}
+		ul li a {
+			color: #0077b5;
+			text-decoration: none;
+		}
+		ul li a:hover {
+			text-decoration: underline;
+		}
     </style>
 </head>
 <body>
     <div class="navbar">
         <div class="name">Brent Murray</div>
         <a href="index.html">Home</a>
+		<a href="resume.html">Work Experience</a>
         <a href="publications.html">Publications</a>
         <a href="awards.html">Awards</a>
-        <a href="resume.html">Work Experience</a>
     </div>
     <div class="main-content">
         <div class="content">
             <h1>Work Experience</h1>
-            <ul>
-				<h2>Present</h2>
-				<li><strong>Technical Mentor for FCOR-599: Project Proposal and Development,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Mentoring masters students on technical/methodological geomatics topics for their capstone projects</li>
-				
-                <li><strong>Teaching Assistant for GEM-520: Remote Sensing for Ecosystem Management,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Aiding masters students in remote sensing techniques and applications; grading assignments</li>
-				
-				<h2>2024</h2>
-				<li><strong>Teaching Assistant for FCOR-503: Policy Analysis,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Aiding masters students online in topics of policy analysis and public engagement; grading assignments</li>
-				
-				<li><strong>Teaching Assistant for FCOR-502: Entrepreneurship,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Aiding masters students online in topics of entrepreneurship; grading assignments</li>
-				
-				<li><strong>Technical Mentor for FCOR-599: Project Proposal and Development,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Mentoring masters students on technical/methodological geomatics topics for their capstone projects</li>
-				
-				<h2>2023</h2>
-				<li><strong>Teaching Assistant for GEM-520: Remote Sensing for Ecosystem Management,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Aiding masters students in remote sensing techniques and applications; grading assignments</li>
-				
-				<li><strong>Teaching Assistant for FCOR-503: Policy Analysis,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Aiding masters students online in topics of policy analysis and public engagement; grading assignments</li>
-				
-				<li><strong>Teaching Assistant for FCOR-502: Entrepreneurship,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Aiding masters students online in topics of entrepreneurship; grading assignments</li>
-				
-				<li><strong>Technical Mentor for FCOR-599: Project Proposal and Development,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Mentoring masters students on technical/methodological geomatics topics for their capstone projects</li>
-				
-				<h2>2022</h2>
-				<li><strong>Technical Mentor for FCOR-599: Project Proposal and Development,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Mentoring masters students on technical/methodological geomatics topics for their capstone projects</li>
-				
-                <li><strong>Teaching Assistant for GEM-520: Remote Sensing for Ecosystem Management,</strong> <em>University of British Columbia (Department of Forest Resources Managment)</em><br>
-				Primary Responsibilities: Aiding masters students in remote sensing techniques and applications; grading assignments</li>
-				
-				<h2>2020 - 2021</h2>
-				<li><strong>GIS Specialist (Remote Sensing),</strong> <em>Ecora Engineering and Resource Group</em><br>
-				Primary Responsibilities: Client meetings, geospatial analysis, creating web maps and applicaitons, database management</li>
-				
-				<li><strong>Geographic Information Systems Lab Instructor,</strong> <em>University of Winnipeg (Department of Geography)</em><br>
-				Primary Responsibilities: Developing GIS labs, teaching GIS skills and techniques, marking assignments, meeting with students to aid in their education</li>
-				
-				<h2> Relevant Past Work Experience</h2>
-				<li><strong>Lead Wilderness Guide,</strong> <em>Wilderland Adventure Company</em><br>
-				Primary Responsibilities: Leading groups (many of which were under-pribileged youth) on wilderness expeditions, field note taking, wilderness cooking, group managment, wilderness training</li>
-				
-				<li><strong>Reserach Assistant,</strong> <em>University of Winnipeg (Department of Geography)</em><br>
-				Primary Responsibilities: Automating the downloading and processing of satellite imagery for the Lake Winnipeg Basin</li>
-				
-				<li><strong>Teaching Assistant for GEOG-3319: Advanced Remote Sensing</strong> <em>University of Winnipeg (Department of Geography)</em><br>
-				Primary Responsibilities: Aiding studnets in rmeote sensing data and software, developing and demonstrating the use of advanced techniques in remote sensing</li>
-				
-				<li><strong>Intern for Remote Sensing Applications,</strong> <em>Commonwealth Scientific and Industrial Research Organisation (Land and Water)</em><br>
-				Primary Responsibilities: Developing automated methods for classification of mangrove alliances and mapping forest structure using optical and synthetic aperture RADAR satellite imagery</li>
-				
-				<li><strong>Teaching Assistantfor GEOG-2316: Introduction to Remote Sensing,</strong> <em>University of Winnipeg (Department of Geography)</em><br>
-				Primary Responsibilities: Aiding students introductory remote sensing topics and software</li>
-				
-				
-            </ul>
+
+            <!-- Present Section -->
+            <div class="work-experience">
+                <div class="year">Present</div>
+                <div class="experience-list">
+                    <ul>
+                        <li><strong>Technical Mentor for FCOR-599: Project Proposal and Development,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Mentoring masters students on technical/methodological geomatics topics for their capstone projects.</li>
+                        <li><strong>Teaching Assistant for GEM-520: Remote Sensing for Ecosystem Management,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Aiding masters students in remote sensing techniques and applications; grading assignments.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2024 Section -->
+            <div class="work-experience">
+                <div class="year">2024</div>
+                <div class="experience-list">
+                    <ul>
+                        <li><strong>Teaching Assistant for FCOR-503: Policy Analysis,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Aiding masters students online in topics of policy analysis and public engagement; grading assignments.</li>
+                        <li><strong>Teaching Assistant for FCOR-502: Entrepreneurship,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Aiding masters students online in topics of entrepreneurship; grading assignments.</li>
+                        <li><strong>Technical Mentor for FCOR-599: Project Proposal and Development,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Mentoring masters students on technical/methodological geomatics topics for their capstone projects.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2023 Section -->
+            <div class="work-experience">
+                <div class="year">2023</div>
+                <div class="experience-list">
+                    <ul>
+                        <li><strong>Teaching Assistant for GEM-520: Remote Sensing for Ecosystem Management,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Aiding masters students in remote sensing techniques and applications; grading assignments.</li>
+                        <li><strong>Teaching Assistant for FCOR-503: Policy Analysis,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Aiding masters students online in topics of policy analysis and public engagement; grading assignments.</li>
+                        <li><strong>Teaching Assistant for FCOR-502: Entrepreneurship,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Aiding masters students online in topics of entrepreneurship; grading assignments.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2022 Section -->
+            <div class="work-experience">
+                <div class="year">2022</div>
+                <div class="experience-list">
+                    <ul>
+                        <li><strong>Technical Mentor for FCOR-599: Project Proposal and Development,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Mentoring masters students on technical/methodological geomatics topics for their capstone projects.</li>
+                        <li><strong>Teaching Assistant for GEM-520: Remote Sensing for Ecosystem Management,</strong> <em>University of British Columbia</em><br>
+                        Primary Responsibilities: Aiding masters students in remote sensing techniques and applications; grading assignments.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- 2020-2021 Section -->
+            <div class="work-experience">
+                <div class="year">2020 - <br>2021</div>
+                <div class="experience-list">
+                    <ul>
+                        <li><strong>GIS Specialist (Remote Sensing),</strong> <em>Ecora Engineering and Resource Group</em><br>
+                        Primary Responsibilities: Client meetings, geospatial analysis, creating web maps and applications, database management.</li>
+                        <li><strong>Geographic Information Systems Lab Instructor,</strong> <em>University of Winnipeg</em><br>
+                        Primary Responsibilities: Developing GIS labs, teaching GIS skills and techniques, marking assignments, meeting with students to aid in their education.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Past Experience Section -->
+            <div class="work-experience">
+                <div class="year">Past</div>
+                <div class="experience-list">
+                    <ul>
+                        <li><strong>Lead Wilderness Guide,</strong> <em>Wilderland Adventure Company</em><br>
+                        Primary Responsibilities: Leading groups (many of which were underprivileged youth) on wilderness expeditions, field note taking, wilderness cooking, group management, wilderness training.</li>
+                        <li><strong>Research Assistant,</strong> <em>University of Winnipeg</em><br>
+                        Primary Responsibilities: Automating the downloading and processing of satellite imagery for the Lake Winnipeg Basin.</li>
+                        <li><strong>Teaching Assistant for GEOG-3319: Advanced Remote Sensing,</strong> <em>University of Winnipeg</em><br>
+                        Primary Responsibilities: Aiding students in remote sensing data and software, developing and demonstrating the use of advanced techniques in remote sensing.</li>
+                        <li><strong>Intern for Remote Sensing Applications,</strong> <em>Commonwealth Scientific and Industrial Research Organisation</em><br>
+                        Primary Responsibilities: Developing automated methods for classification of mangrove alliances and mapping forest structure using optical and synthetic aperture RADAR satellite imagery.</li>
+                        <li><strong>Teaching Assistant for GEOG-2316: Introduction to Remote Sensing,</strong> <em>University of Winnipeg</em><br>
+                        Primary Responsibilities: Aiding students with introductory remote sensing topics and software.</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>

@@ -21,7 +21,7 @@
             padding: 20px;
             background-color: #f4f4f4;
             position: fixed;
-            left: 80px;
+            left: 180px;
             top: 0;
             bottom: 0;
             display: flex;
@@ -39,10 +39,15 @@
             object-fit: cover;
             margin-bottom: 20px;
         }
+		.profile-name {
+			font-size: 36px;
+			font-weight: bold;
+			margin-bottom: 20px
+		}
         .social-links {
             display: flex;
             justify-content: center;
-            margin-bottom: 20px;
+            margin-bottom: 30px;
             width: 100%;
         }
         .social-links a {
@@ -75,7 +80,7 @@
             background-color: #0f6586;
         }
         .main-content {
-            margin-left: 500px; 
+            margin-left: 600px; 
             padding: 20px 40px;
             flex: 1;
             overflow-y: auto; /* Allow scrolling in the main content area */
@@ -92,11 +97,37 @@
             margin-top: 30px;
             font-size: 18px;
         }
+        .publication-grid {
+            display: flex;
+            gap: 20px;
+        }
+        .publication-item {
+            flex: 1;
+            background-color: #fff;
+            padding: 5px 20px 20px 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .publication-item h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .publication-item p {
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+		.abstract {
+			background-color: #f0f4f8; /* Light grey-blue background */
+			padding: 1px 10px 10px 10px;
+			border-radius: 5px;
+			margin-top: 10px;
+		}
     </style>
 </head>
 <body>
     <div class="sidebar">
         <img src="images/20221202-DSC_1277-Edit.jpg" alt="Brent Murray" class="profile-picture">
+		<div class="profile-name">Brent Murray</div>
         <div class="social-links">
             <a href="https://x.com/BrentAMurray" target="_blank">
                 <img src="images/x-icon.png" alt="X">
@@ -107,34 +138,52 @@
             <a href="https://orcid.org/0000-0003-3053-9448" target="_blank">
                 <img src="images/orcid-icon.png" alt="ORCID">
             </a>
-			<a href="https://github.com/Brent-Murray" target="_blank">
+            <a href="https://github.com/Brent-Murray" target="_blank">
                 <img src="images/github-icon.png" alt="GitHub">
             </a>
-			<a href="mailto:brntmrry@student.ubc.ca" target="_blank">
-				<img src="images/email-icon.png", alt=EMail">
+            <a href="mailto:brntmrry@student.ubc.ca" target="_blank">
+                <img src="images/email-icon.png" alt="Email">
+            </a>
         </div>
         <div class="profile-links">
-			<a href="index.html">Home</a>
+            <a href="index.html">Home</a>
+			<a href="resume.html">Work Experience</a>
             <a href="publications.html">Publications</a>
             <a href="awards.html">Awards</a>
-            <a href="resume.html">Work Experience</a>
         </div>
     </div>
     <div class="main-content">
         <div class="content">
-            <h1>Brent Murray</h1>
+            <h1>Bio</h1>
             <p class="bio">
-                I am a PhD Candidate at the University of British Columbia in the <a href="https://irsslab.forestry.ubc.ca/" target="_blank">Integrated Remote Sensing Studio (IRSS)</a>. My research focuses on predicting tree species with data fusion and deep learning techniques. In 2021 I graduated with a Master of Geomatics for Environmental Management (MGEM) from the University of British Columbia where I completed a capstone project looking at forest resiliency after major wildfire events in British Columbia.<br>
-				<br>
-            
-				Currently, I am working as a teaching assistant in the MGEM program for the course <em>Remote Sensing for Ecosystem Management.</em> This course provides an introduction to remote sensing and its application in mapping, monitoring, and managing forestry, vegetation, and ecosystem resources. Additionally, I serve as a technical mentor for a group of MGEM students, offering technical support and guidance for their capstone projects.<br>
-				<br>
-				
-				
-			</p>
+                I am a PhD Candidate at the University of British Columbia in the <a href="https://irsslab.forestry.ubc.ca/" target="_blank">Integrated Remote Sensing Studio (IRSS)</a> under the supervision of Dr. Nicholas Coops. My research focuses on predicting tree species with data fusion and deep learning techniques. In 2021 I graduated with a Master of Geomatics for Environmental Management (MGEM) from the University of British Columbia where I completed a capstone project looking at forest resiliency after major wildfire events in British Columbia.<br>
+                <br>
+                Currently, I am working as a teaching assistant in the MGEM program for the course <em>Remote Sensing for Ecosystem Management.</em> This course provides an introduction to remote sensing and its application in mapping, monitoring, and managing forestry, vegetation, and ecosystem resources. Additionally, I serve as a technical mentor for a group of MGEM students, offering technical support and guidance for their capstone projects.
+            </p>
+			<br>
             <div class="publication">
-                <h2>Recent Publication</h2>
-                <p><a href="https://www.sciencedirect.com/science/article/pii/S0924271623003453" target="_blank">Estimating tree species composition from airborne laser scanning data using point-based deep learning models</a></p>
+                <h2>Recent Publications</h2>
+                <div class="publication-grid">
+                    <div class="publication-item">
+                        <h3><a href="https://arxiv.org/pdf/2408.06507" target="_blank">Benchmarking tree species classification from proximally-sensed laser scanning data: introducing the FOR-species20K dataset</a></h3>
+						<p>Stefano Puliti, Emily R. Lines, Jana Müllerová, Julian Frey, Zoe Schindler, Adrian Straker, Matthew J. Allen, Lukas Winiwarter, Nataliia Rehush, Hristina Hristova, <strong>Brent Murray</strong>, Kim Calders, Louise Terryn, Nicholas Coops, Bernhard Höfle, Samuli Junttila, Martin Krůček, Grzegorz Krok, Kamil Král, Shaun R. Levick, Linda Luck, Azim Missarov, Martin Mokroš, Harry J. F. Owen, Krzysztof Stereńczak, Timo P. Pitkänen, Nicola Puletti, Ninni Saarinen, Chris Hopkinson, Chiara Torresan, Enrico Tomelleri, Hannah Weiser, Rasmus Astrup</p>
+						<div class="abstract">
+							<p><strong>Abstract</strong></p>
+							<p>Proximally-sensed laser scanning offers significant potential for automated forest data capture, but challenges remain in automatically identifying tree species without additional ground data. Deep learning (DL) shows promise for automation, yet progress is slowed by the lack of large, diverse, openly available labeled datasets of single tree point clouds. This has impacted the robustness of DL models and the ability to establish best practices for species classification.</p>
+							<p>To overcome these challenges, the FOR-species20K benchmark dataset was created, comprising over 20,000 tree point clouds from 33 species, captured using terrestrial (TLS), mobile (MLS), and drone laser scanning (ULS) across various European forests, with some data from other regions. This dataset enables the benchmarking of DL models for tree species classification, including both point cloud-based (PointNet++, MinkNet, MLP-Mixer, DGCNNs) and multi-view image-based methods (SimpleView, DetailView, YOLOv5).</p>
+							<p>2D image-based models generally performed better (average OA = 0.77) than 3D point cloud-based models (average OA = 0.72), with consistent results across different scanning platforms and sensors. The top model, DetailView, was particularly robust, handling data imbalances well and generalizing effectively across tree sizes.</p>
+							<p>The FOR-species20K dataset, available at this <a href="https://zenodo.org/records/13255198" target="_blank">URL</a>, is a key resource for developing and benchmarking DL models for tree species classification using laser scanning data, providing a foundation for future advancements in the field.</p>
+						</div>
+					</div>
+                    <div class="publication-item">
+                        <h3><a href="https://www.sciencedirect.com/science/article/pii/S0924271623003453" target="_blank">Estimating tree species composition from airborne laser scanning data using point-based deep learning models</a></h3>
+						<p><strong>Brent A. Murray</strong>, Nicholas C. Coops, Lukas Winiwarter, Joanne C. White, Adam Dick, Ignacio Barbeito, Ahmed Ragab</p>
+						<div class="abstract">
+							<p><strong>Abstract</strong></p>
+							<p>Airborne laser scanning (ALS) data is increasingly being used for accurate estimations of forest inventory attributes, such as tree height and volume. However, determining tree species information, an important attribute required by inventories for a range of forest management applications, is challenging to extract from ALS data. This is due to complex species assemblages and vertical structures in certain forest environments, and a lack of spectral information for most ALS sensors. Our objective was to estimate tree species compositions in a Canadian boreal forest environment using ALS data and point-based deep learning techniques. To accomplish this, we utilised existing polygonal forest resource information to develop a large comprehensive dataset of tree species compositions across a 630,000 ha forest management area. We then used an adapted PointAugment generative adversarial network (GAN) coupled with the dynamic graph convolutional neural network to estimate tree species proportions. This innovative deep learning approach resulted in an overall R2adj of 0.61 for all tree species proportions. A weighted F1 score of 63% was observed when classifying the leading species of a plot, 66% for leading genus, and 85% when distinguishing between coniferous and deciduous dominated plots. Furthermore, the PointAugment GAN successfully generated augmented point clouds of forest plots which can alleviate issues associated with limited training samples for use in deep learning. This approach demonstrates the capability of point-based deep learning techniques to accurately estimate tree species compositions from ALS point clouds within an expansive forested region, characterized by a complex management history and a diversity of tree species. The source code along with the pretrained models are available at <a href="https://github.com/Brent-Murray/point-dl/tree/main/Pytorch/models/PointAugment" target="_blank">https://github.com/Brent-Murray/point-dl/tree/main/Pytorch/models/PointAugment</a>.</p>
+						</div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
