@@ -19,7 +19,7 @@
             background-color: #158cba;
             display: flex;
             align-items: center;
-            padding: 20px 40px; /* Align this padding with the main content */
+            padding: 20px 40px;
             position: fixed;
             top: 0;
             left: 0;
@@ -45,19 +45,19 @@
             background-color: #0f6586;
         }
         .main-content {
-            margin-top: 100px; /* Adjust this value depending on the height of your navbar */
-            padding: 20px 40px; /* Align this padding with the navbar */
+            margin-top: 100px;
+            padding: 20px 40px;
             flex: 1;
         }
         .content {
             max-width: 1200px;
             margin: 0 auto;
         }
-		table {
-            width: auto; /* Allows the table to adjust based on content */
+        table {
+            width: auto;
             border-collapse: collapse;
             margin-top: 20px;
-            min-width: 500px; /* Set a minimum width based on the longest content */
+            min-width: 500px;
         }
         table, th, td {
             border: 1px solid #333;
@@ -65,16 +65,23 @@
         th, td {
             padding: 10px;
             text-align: left;
-            white-space: nowrap; /* Prevents text from wrapping */
+            white-space: nowrap;
         }
         th {
             background-color: #158cba;
             color: white;
         }
         td {
-            max-width: 500px; /* Max width for content, adjust as needed */
+            max-width: 500px;
             overflow: hidden;
-            text-overflow: ellipsis; /* Truncates text if it overflows */
+            text-overflow: ellipsis;
+        }
+        /* Add alternating row colors */
+        table tr:nth-child(odd) {
+            background-color: #f4f4f4;
+        }
+        table tr:nth-child(even) {
+            background-color: #e0e0e0;
         }
     </style>
 </head>
@@ -94,6 +101,10 @@
                     <th>Year</th>
                     <th>Award</th>
                 </tr>
+				<tr>
+                    <td>2024</td>
+                    <td>President's Academic Excellence Initiative PhD Award (Winter)</td>
+                </tr>
                 <tr>
                     <td>2024</td>
                     <td>Patrick David Campbell Graduate Fellowship</td>
@@ -102,9 +113,25 @@
 					<td>2024</th>
 					<td>Elwyn Gregg Memorial Fellowship</td>
 				</tr>
+				<tr>
+                    <td>2024</td>
+                    <td>President's Academic Excellence Initiative PhD Award (Summer)</td>
+                </tr>
                 <tr>
                     <td>2024</td>
                     <td>MGEM Best TA Award</td>
+                </tr>
+				<tr>
+                    <td>2023</td>
+                    <td>President's Academic Excellence Initiative PhD Award (Winter)</td>
+                </tr>
+				<tr>
+                    <td>2023</td>
+                    <td>President's Academic Excellence Initiative PhD Award (Summer)</td>
+                </tr>
+				<tr>
+                    <td>2022</td>
+                    <td>President's Academic Excellence Initiative PhD Award (Winter)</td>
                 </tr>
                 <tr>
                     <td>2020</td>
