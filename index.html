@@ -5,124 +5,179 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Brent Murray - Portfolio</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-            display: flex;
-            min-height: 100vh;
-            overflow-x: hidden;
-            overflow-y: hidden; /* Prevent vertical scrolling on the body */
-        }
-        .sidebar {
-            width: 400px; 
-            padding: 20px;
-            background-color: #f4f4f4;
-            position: fixed;
-            left: 180px;
-            top: 0;
-            bottom: 0;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            text-align: center;
-            border-right: none;
-            overflow-y: auto; /* Allow scrolling within the sidebar if needed */
-        }
-        .profile-picture {
-            width: 300px; 
-            height: 300px;
-            border-radius: 50%;
-            object-fit: cover;
-            object-fit: cover;
-            margin-bottom: 20px;
-        }
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+			background-color: #f4f4f4;
+			color: #333;
+			display: flex;
+			flex-direction: row; /* Ensure the sidebar and main content are side by side */
+			min-height: 100vh;
+			overflow-x: hidden;
+		}
+
+		.sidebar {
+			width: 25%; /* Set sidebar width */
+			max-width: 400px;
+			padding: 20px;
+			background-color: #f4f4f4;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			text-align: center;
+			border-right: none;
+			overflow-y: auto;
+			box-sizing: border-box;
+		}
+
+		.profile-picture {
+			width: 100%;
+			max-width: 300px;
+			height: 300px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 20px;
+		}
+
 		.profile-name {
 			font-size: 36px;
 			font-weight: bold;
-			margin-bottom: 20px
+			margin-bottom: 20px;
 		}
-        .social-links {
-            display: flex;
-            justify-content: center;
-            margin-bottom: 30px;
-            width: 100%;
-        }
-        .social-links a {
-            margin: 0 10px;
-            text-decoration: none;
-        }
-        .social-links img {
-            width: 40px;
-            height: 40px;
-        }
-        .profile-links {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        .profile-links a {
-            text-decoration: none;
-            color: white;
-            background-color: #158cba;
-            padding: 10px;
-            margin-top: 10px;
-            font-size: 18px;
-            border-radius: 5px;
-            transition: background-color 0.3s ease;
-            width: 80%; 
-            text-align: center;
-        }
-        .profile-links a:hover {
-            background-color: #0f6586;
-        }
-        .main-content {
-            margin-left: 600px; 
-            padding: 20px 40px;
-            flex: 1;
-            overflow-y: auto; /* Allow scrolling in the main content area */
-        }
-        .content {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .bio {
-            font-size: 18px;
-            margin-top: 10px;
-        }
-        .publication {
-            margin-top: 30px;
-            font-size: 18px;
-        }
-        .publication-grid {
-            display: flex;
-            gap: 20px;
-        }
-        .publication-item {
-            flex: 1;
-            background-color: #fff;
-            padding: 5px 20px 20px 20px;
-            border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .publication-item h3 {
-            font-size: 20px;
-            margin-bottom: 10px;
-        }
-        .publication-item p {
-            font-size: 16px;
-            margin-bottom: 10px;
-        }
+
+		.social-links {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap; /* Allow links to wrap on smaller screens */
+			margin-bottom: 30px;
+			width: 100%;
+		}
+
+		.social-links a {
+			margin: 10px; /* Add more margin for better spacing when they wrap */
+			text-decoration: none;
+			flex: 0 1 40px; /* Ensure each icon has a fixed size */
+		}
+
+		.social-links img {
+			width: 40px;
+			height: 40px;
+			display: block;
+		}
+
+		.profile-links {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		.profile-links a {
+			text-decoration: none;
+			color: white;
+			background-color: #158cba;
+			padding: 10px;
+			margin-top: 10px;
+			font-size: 18px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+			width: 80%; 
+			text-align: center;
+		}
+
+		.profile-links a:hover {
+			background-color: #0f6586;
+		}
+
+		.main-content {
+			width: 75%; /* Ensure main content takes the remaining space */
+			padding: 20px;
+			box-sizing: border-box;
+			overflow-y: auto;
+		}
+
+		.content {
+			max-width: 1200px;
+			margin: 0 auto;
+		}
+
+		.bio {
+			font-size: 18px;
+			margin-top: 10px;
+		}
+
+		.publication {
+			margin-top: 30px;
+			font-size: 18px;
+		}
+
+		.publication-grid {
+			display: flex;
+			gap: 20px;
+			flex-wrap: wrap; /* Allow items to wrap when screen is small */
+		}
+
+		.publication-item {
+			flex: 1 1 calc(50% - 20px); /* Two items per row with space for gap */
+			background-color: #fff;
+			padding: 5px 20px 20px 20px;
+			border-radius: 8px;
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+			min-width: 300px; /* Minimum width for smaller screens */
+			box-sizing: border-box;
+		}
+
+		.publication-item h3 {
+			font-size: 20px;
+			margin-bottom: 10px;
+		}
+
+		.publication-item p {
+			font-size: 16px;
+			margin-bottom: 10px;
+		}
+
 		.abstract {
-			background-color: #f0f4f8; /* Light grey-blue background */
-			padding: 1px 10px 10px 10px;
+			background-color: #f0f4f8;
+			padding: 10px;
 			border-radius: 5px;
 			margin-top: 10px;
 		}
-    </style>
+
+		@media (max-width: 768px) {
+			.sidebar {
+				width: 100%;
+			}
+
+			.main-content {
+				width: 100%;
+			}
+
+			.publication-item {
+				flex: 1 1 100%; /* Stack items vertically on smaller screens */
+			}
+		}
+		
+		@media (max-width: 600px) {
+			.social-links {
+				justify-content: space-around; /* Distribute icons evenly */
+			}
+		}
+
+		@media (max-width: 400px) {
+			.social-links a {
+				flex: 1 1 auto; /* Allow more flexibility for small screens */
+			}
+
+			.social-links img {
+				width: 30px; /* Slightly reduce icon size on very small screens */
+				height: 30px;
+			}
+		}
+	</style>
+
+
 </head>
 <body>
     <div class="sidebar">
