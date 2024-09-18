@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Brent Murray - Portfolio</title>
+    <title>Brent Murray - Publications</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -55,12 +55,30 @@
             max-width: 1200px;
             margin: 0 auto;
         }
-        ul {
+        .publications, .conferences {
+            display: grid;
+            grid-template-columns: 150px 1fr;
+            grid-gap: 20px;
+            margin-bottom: 20px;
+            align-items: center;
+            border-bottom: 1px solid #ccc;
+        }
+        .publication, .conference {
+            font-size: 24px;
+            font-weight: bold;
+            color: #555;
+            text-align: left;
+            padding-right: 20px;
+        }
+        .publication-list ul, .conference-list ul {
+            padding-left: 0;
             list-style-type: none;
-            padding: 0;
         }
         ul li {
             margin-bottom: 20px;
+        }
+        ul li strong {
+            color: #158cba;
         }
         ul li a {
             color: #0077b5;
@@ -69,13 +87,7 @@
         ul li a:hover {
             text-decoration: underline;
         }
-        h1, h2 {
-            margin-top: 40px;
-            font-size: 24px;
-            color: #333;
-        }
 
-        /* Responsive adjustments */
         @media (max-width: 768px) {
             .navbar {
                 padding: 10px 20px; /* Reduce padding */
@@ -108,65 +120,77 @@
     <div class="navbar">
         <div class="name">Brent Murray</div>
         <a href="index.html">Home</a>
-		<a href="resume.html">Work Experience</a>
+        <a href="resume.html">Work Experience</a>
         <a href="publications.html">Publications</a>
         <a href="awards.html">Awards</a>
     </div>
     <div class="main-content">
         <div class="content">
-            <h1>Publications</h1>
-            <ul>
-                <li>Puliti, S., Lines, E. R., Müllerová, J., Frey, J., Schindler, Z., Straker, A., Allen, M. J.,
-Winiwarter, L., Rehush, N., Hristova, H., <strong>Murray, B.</strong>, Terryn, L., Coops, N., Höfle, B.,
-Junttila, S., Krůček, M., Král, K., Levick, S. R., Luck, L., … Astrup, R. (2024). <em>Benchmarking
-tree species classification from proximally-sensed laser scanning data: Introducing the
-FOR-species20K dataset</em> (<a href="https://arxiv.org/abs/2408.06507" target="_blank">arXiv:2408.06507</a>). arXiv.</li>
+			<h1>Publications and Conferences</h1>
+            <!-- Publications Section -->
+            <div class="publications">
+                <div class="publication">Publications</div>
+                <div class="publication-list">
+                    <ul>
+                        <li>Puliti, S., Lines, E. R., Müllerová, J., Frey, J., Schindler, Z., Straker, A., Allen, M. J.,
+                        Winiwarter, L., Rehush, N., Hristova, H., <strong>Murray, B.</strong>, Terryn, L., Coops, N., Höfle, B.,
+                        Junttila, S., Krůček, M., Král, K., Levick, S. R., Luck, L., … Astrup, R. (2024). <em>Benchmarking
+                        tree species classification from proximally-sensed laser scanning data: Introducing the
+                        FOR-species20K dataset</em> (<a href="https://arxiv.org/abs/2408.06507" target="_blank">arXiv:2408.06507</a>). arXiv.</li>
 
-                <li><strong>Murray, B. A.</strong>, Coops, N. C., Winiwarter, L., White, J. C., Dick, A., Barbeito, I., & Ragab, A.
-(2024). <em>Estimating tree species composition from airborne laser scanning data using
-point-based deep learning models.</em> ISPRS Journal of Photogrammetry and Remote
-Sensing, 207, 282–297. <a href="https://doi.org/10.1016/j.isprsjprs.2023.12.008" target="_blank">https://doi.org/10.1016/j.isprsjprs.2023.12.008</a></li>
+                        <li><strong>Murray, B. A.</strong>, Coops, N. C., Winiwarter, L., White, J. C., Dick, A., Barbeito, I., & Ragab, A.
+                        (2024). <em>Estimating tree species composition from airborne laser scanning data using
+                        point-based deep learning models.</em> ISPRS Journal of Photogrammetry and Remote
+                        Sensing, 207, 282–297. <a href="https://doi.org/10.1016/j.isprsjprs.2023.12.008" target="_blank">https://doi.org/10.1016/j.isprsjprs.2023.12.008</a></li>
 
-                <li>Tsenov, R.-M., Henry, C. J., Storie, J. L., Storie, C. D., <strong>Murray, B.</strong>, & Sokolov, M. (2023).
-<em>Exploration of convolutional neural network architectures for large region map
-automation.</em> Journal of Applied Remote Sensing, 17.
-<a href="https://doi.org/10.1117/1.JRS.17.018505" target="_blank">https://doi.org/10.1117/1.JRS.17.018505</a></li>
+                        <li>Tsenov, R.-M., Henry, C. J., Storie, J. L., Storie, C. D., <strong>Murray, B.</strong>, & Sokolov, M. (2023).
+                        <em>Exploration of convolutional neural network architectures for large region map
+                        automation.</em> Journal of Applied Remote Sensing, 17.
+                        <a href="https://doi.org/10.1117/1.JRS.17.018505" target="_blank">https://doi.org/10.1117/1.JRS.17.018505</a></li>
 
-                <li><strong>Murray, B. A.</strong>, Sims, N., & Storie, J. (2022). <em>Mapping mangrove alliances using historical
-data in Fiji.</em> Journal of Coastal Conservation, 26(5), 47. <a href="https://doi.org/10.1007/s11852-022-00887-y" target="_blank">https://doi.org/10.1007/s11852-022-00887-y</a></li>
+                        <li><strong>Murray, B. A.</strong>, Sims, N., & Storie, J. (2022). <em>Mapping mangrove alliances using historical
+                        data in Fiji.</em> Journal of Coastal Conservation, 26(5), 47. <a href="https://doi.org/10.1007/s11852-022-00887-y" target="_blank">https://doi.org/10.1007/s11852-022-00887-y</a></li>
 
-                <li>Storie, J., Storie, C. D., Henry, C. J., Sokolov, M., <strong>Murray, B.</strong>, Cameron, J., & Tsenov, R.-M.
-(2021). <em>Basin-scale and seasonal evaluation of automated threshold methods for surface
-water detection.</em> Remote Sensing Letters, 12(7), 645–653.
-<a href="https://doi.org/10.1080/2150704X.2021.1918788" target="_blank">https://doi.org/10.1080/2150704X.2021.1918788</a></li>
+                        <li>Storie, J., Storie, C. D., Henry, C. J., Sokolov, M., <strong>Murray, B.</strong>, Cameron, J., & Tsenov, R.-M.
+                        (2021). <em>Basin-scale and seasonal evaluation of automated threshold methods for surface
+                        water detection.</em> Remote Sensing Letters, 12(7), 645–653.
+                        <a href="https://doi.org/10.1080/2150704X.2021.1918788" target="_blank">https://doi.org/10.1080/2150704X.2021.1918788</a></li>
 
-                <li><strong>Murray, Brent</strong>, 2021, <em>The Impacts of Burn Severity on Forest Resiliency in British
-Columbia</em>, <a href="https://doi.org/10.5683/SP2/TYN44T" target="_blank">https://doi.org/10.5683/SP2/TYN44T</a>, Scholars Portal Dataverse, V1</li>
-            </ul>
-			<br>
-            <h1>Conferences and Presentations</h1>
-            <ul>
-                <li>Symposium on Systems Analysis in Forest Resources (SSAFR), Hondarribia, Basque Country, Spain<br>
-                Presentation Title: <em>Estimating tree species composition with lidar and point-based deep learning</em> [May 15, 2024]</li>
+                        <li><strong>Murray, Brent</strong>, 2021, <em>The Impacts of Burn Severity on Forest Resiliency in British
+                        Columbia</em>, <a href="https://doi.org/10.5683/SP2/TYN44T" target="_blank">https://doi.org/10.5683/SP2/TYN44T</a>, Scholars Portal Dataverse, V1</li>
+                    </ul>
+                </div>
+            </div>
 
-                <li>Annual LiDAR/EFI Cross-Country Checkup, Canadian Wood Fiber Centre (via Zoom)<br>
-                Presentation Title: <em>Estimating tree species composition with lidar and point-based deep learning</em> [February 8, 2024]</li>
+            <!-- Conferences Section -->
+            <div class="conferences">
+                <div class="conference">Conferences and Presentations</div>
+                <div class="conference-list">
+                    <ul>
+                        <li>Symposium on Systems Analysis in Forest Resources (SSAFR), Hondarribia, Basque Country, Spain<br>
+                        Presentation Title: <em>Estimating tree species composition with lidar and point-based deep learning</em> [May 15, 2024]</li>
 
-                <li>Manitoba Hydro Contract Automated Land Use and Land Cover (LULC) Classification for Hydrological Modelling and Physically-Based Inflow Forecasting, Manitoba Hydro (via Zoom), Winnipeg MB<br>
-                Presentation Title: <em>Sub-project 1: Automated Historical LULC Map Production</em> [June 11, 2020]</li>
+                        <li>Annual LiDAR/EFI Cross-Country Checkup, Canadian Wood Fiber Centre (via Zoom)<br>
+                        Presentation Title: <em>Estimating tree species composition with lidar and point-based deep learning</em> [February 8, 2024]</li>
 
-                <li>Department of Geography Lecture Series, University of Winnipeg, Winnipeg MB<br>
-                Presentation Title: <em>Monitoring Mangrove Alliances in Fiji Using Historical Data</em> [Oct 9, 2019]</li>
+                        <li>Manitoba Hydro Contract Automated Land Use and Land Cover (LULC) Classification for Hydrological Modelling and Physically-Based Inflow Forecasting, Manitoba Hydro (via Zoom), Winnipeg MB<br>
+                        Presentation Title: <em>Sub-project 1: Automated Historical LULC Map Production</em> [June 11, 2020]</li>
 
-                <li>Randy Kobes Undergraduate Poster Symposium, University of Winnipeg, Winnipeg MB<br>
-                Poster Title: <em>Monitoring Mangrove Alliances in Fiji for Socio-Cultural Applications</em> [Sept 18, 2019]</li>
+                        <li>Department of Geography Lecture Series, University of Winnipeg, Winnipeg MB<br>
+                        Presentation Title: <em>Monitoring Mangrove Alliances in Fiji Using Historical Data</em> [Oct 9, 2019]</li>
 
-                <li>CSIRO SAR Community of Practice Meeting, Canberra, Australia<br>
-                Presentation Title: <em>Forest Structure Mapping Using Multi-Temporal Sentinel-1 RADAR Data in Robson Creek, Australia</em> [June 11, 2019]</li>
+                        <li>Randy Kobes Undergraduate Poster Symposium, University of Winnipeg, Winnipeg MB<br>
+                        Poster Title: <em>Monitoring Mangrove Alliances in Fiji for Socio-Cultural Applications</em> [Sept 18, 2019]</li>
 
-                <li>Department of Geography Undergraduate Thesis Colloquium, University of Winnipeg, Winnipeg, MB<br>
-                Presentation Title: <em>Forest Structure Mapping Using Multi-Temporal Sentinel-1 RADAR Data in Robson Creek, Australia</em> [March 29, 2019]</li>
-            </ul>
+                        <li>CSIRO SAR Community of Practice Meeting, Canberra, Australia<br>
+                        Presentation Title: <em>Forest Structure Mapping Using Multi-Temporal Sentinel-1 RADAR Data in Robson Creek, Australia</em> [June 11, 2019]</li>
+
+                        <li>Department of Geography Undergraduate Thesis Colloquium, University of Winnipeg, Winnipeg, MB<br>
+                        Presentation Title: <em>Forest Structure Mapping Using Multi-Temporal Sentinel-1 RADAR Data in Robson Creek, Australia</em> [March 29, 2019]</li>
+                    </ul>
+                </div>
+            </div>
+
         </div>
     </div>
 </body>
