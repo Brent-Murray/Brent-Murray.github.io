@@ -15,35 +15,37 @@
 			overflow-x: hidden;
 		}
 		.navbar {
-			width: 100%;
-			background-color: #158cba;
-			display: flex;
-			align-items: center;
-			padding: 20px 40px;
-			position: fixed;
-			top: 0;
-			left: 0;
-			z-index: 1000;
-		}
-		.navbar .name {
-			font-size: 24px;
-			color: white;
-			margin-right: 30px;
-			line-height: 1.5;
-		}
-		.navbar a {
-			text-decoration: none;
-			color: white;
-			padding: 10px 20px;
-			margin: 0 15px;
-			font-size: 18px;
-			border-radius: 5px;
-			transition: background-color 0.3s ease;
-			line-height: 1.5;
-		}
-		.navbar a:hover {
-			background-color: #0f6586;
-		}
+            width: 100%;
+            background-color: #158cba;
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            flex-wrap: wrap; /* Allow items to wrap on smaller screens */
+            justify-content: flex-start; /* Align items to the left */
+        }
+        .navbar .name {
+            font-size: 24px;
+            color: white;
+            margin-right: 30px;
+            line-height: 1.5;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            line-height: 1.5;
+        }
+        .navbar a:hover {
+            background-color: #0f6586;
+        }
 		.main-content {
 			margin-top: 100px;
 			padding: 20px 40px;
@@ -85,6 +87,33 @@
 		ul li a:hover {
 			text-decoration: underline;
 		}
+		
+		@media (max-width: 768px) {
+            .navbar {
+                padding: 10px 20px; /* Reduce padding */
+            }
+            .navbar .name {
+                font-size: 18px; /* Reduce name font size */
+            }
+            .navbar a {
+                padding: 8px 10px; /* Adjust padding for links */
+                margin: 5px; /* Reduce margin */
+                font-size: 16px; /* Reduce font size for links */
+            }
+            .main-content {
+                padding: 10px 20px; /* Reduce padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar .name {
+                font-size: 16px; /* Further reduce font size */
+            }
+            .navbar a {
+                font-size: 14px; /* Further reduce font size for links */
+                padding: 6px 8px; /* Reduce padding for links */
+            }
+        }
     </style>
 </head>
 <body>
