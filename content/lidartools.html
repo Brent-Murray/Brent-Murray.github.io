@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brent Murray - Lidar Tools</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        .navbar {
+            width: 100%;
+            background-color: #158cba;
+            display: flex;
+            align-items: center;
+            padding: 20px 40px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+        .navbar .name {
+            font-size: 24px;
+            color: white;
+            margin-right: 30px;
+            line-height: 1.5;
+        }
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            padding: 10px 20px;
+            margin: 0 10px;
+            font-size: 18px;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            line-height: 1.5;
+        }
+        .navbar a:hover {
+            background-color: #0f6586;
+        }
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		/* Dropdown button */
+		.dropdown .dropbtn {
+			background-color: #158cba;
+			color: white;
+			padding: 10px 20px;
+			font-size: 18px;
+			border: none;
+			cursor: pointer;
+			border-radius: 5px; /* Rounded corners */
+		}
+
+		.dropdown .dropbtn::after {
+			content: " ▼"; /* Down arrow symbol */
+			font-size: 10px;
+			margin-left: 5px; /* Add some space between the text and arrow */
+		}
+
+		.dropdown:hover .dropbtn {
+			background-color: #0f6586;
+		}
+
+		/* Dropdown content (hidden by default) */
+		.dropdown-content {
+			position: absolute;
+			background-color: #0f6586;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+			border-radius: 5px; /* Rounded corners */
+			margin-top: 5px; /* Space between button and dropdown */
+			opacity: 0; /* Make it invisible initially */
+			max-height: 0; /* Initially hidden height */
+			overflow: hidden; /* Hide content when collapsed */
+			transform: translateY(-10px); /* Initial slide-up position */
+			transition: all 0.3s ease; /* Transition for opacity, max-height, and transform */
+		}
+
+		/* Links inside the dropdown */
+		.dropdown-content a {
+			color: white;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+		}
+
+		.dropdown-content a:hover {
+			color: #d3d3d3;
+		}
+
+		/* Show the dropdown menu on hover */
+		.dropdown:hover .dropdown-content {
+			opacity: 1; /* Fade-in effect */
+			max-height: 200px; /* Dropdown height (adjust as needed) */
+			transform: translateY(0); /* Slide down effect */
+		}
+        .main-content {
+            margin-top: 100px;
+            padding: 20px 40px;
+            flex: 1;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* New paragraph styling */
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+
+        p a {
+            color: #0077b5;
+            text-decoration: underline;
+        }
+
+        p a:hover {
+            color: #005f8f;
+        }
+		
+		p strong {
+			color: #158cba;
+		}
+
+		/* List box styling */
+        .list-container {
+            padding: 1px 50px 1px 50px;
+            border-radius: 10px;
+            margin-top: 10px;
+        }
+		
+        /* Two-column list layout */
+        ul {
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+        }
+
+        ul li {
+            width: 48%;
+            margin-bottom: 20px;
+            padding-right: 2%;
+			font-size: 18px;
+        }
+
+        ul li strong {
+            color: #158cba;
+        }
+
+        ul li a {
+            color: #0077b5;
+            text-decoration: none;
+        }
+
+        ul li a:hover {
+            text-decoration: underline;
+        }
+		
+		.image-container {
+            float: right;
+            margin-right: 20px;
+            width: 200px; /* Adjust based on your image size */
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                padding: 10px 20px;
+            }
+            .navbar .name {
+                font-size: 18px;
+            }
+            .navbar a {
+                padding: 8px 10px;
+                margin: 5px;
+                font-size: 16px;
+            }
+            .main-content {
+                padding: 10px 20px;
+            }
+            ul li {
+                width: 100%; /* Single column for smaller screens */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .navbar .name {
+                font-size: 16px;
+            }
+            .navbar a {
+                font-size: 14px;
+                padding: 6px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <div class="name">Brent Murray</div>
+        <a href="../index.html">Home</a>
+        <a href="../resume.html">Work Experience</a>
+        <a href="../publications.html">Publications</a>
+        <a href="../awards.html">Awards</a>
+		<div class="dropdown">
+            <button class="dropbtn">Content</button>
+            <div class="dropdown-content">
+                <a href="../content/lidartools.html">Lidar Tools</a>
+			</div>
+		</div>
+    </div>
+    <div class="main-content">
+        <div class="content">
+            <h1>Lidar Tools and Workflows</h1>
+            <p>Lidar, short for <strong>light detection and ranging</strong>, is a remote sensing technology used to <strong>measure distances</strong> and create detailed 3D maps of objects and landscapes. It works by sending out <strong>laser pulses and measuring the time</strong> it takes for these pulses to bounce back after hitting a target. By collecting these <strong>distance measurements</strong> from many laser pulses, lidar can create highly accurate and precise models of the <strong>shape and elevation</strong> of the Earth's surface. In the context of forestry, lidar is valuable for <strong>mapping and assessing forests</strong>, including estimating tree heights and canopy structures.</p>
+            <br>
+            <h2>Types of Lidar Systems</h2>
+            <p>There are a few different types of lidar systems each serving a unique purpose, allowing researchers to select the most suitable technology for their specific purpose.</p>
+
+            <!-- Wrapped the list in a container with a background and border -->
+            <div class="list-container">
+                <ul>
+                    <li><strong>✈️ Airborne Lidar:</strong> Mounted on aircraft or drones, it scans the Earth's surface from above. Used for large-scale mapping, forest inventories, and terrain modeling.</li>
+                    <li><strong>🌲 Terrestrial Lidar:</strong> Ground-based systems on tripods or vehicles. Ideal for high-resolution 3D scanning of specific objects or areas, like individual trees or structures.</li>
+                    <li><strong>🛰️ Spaceborne Lidar:</strong> Installed on satellites orbiting Earth. Provides a global perspective for mapping, monitoring vegetation, and planetary terrain analysis.</li>
+                    <li><strong>🚗 Mobile Lidar:</strong> Mounted on vehicles or carried by individuals. Collects 3D data while in motion, useful for road surveys and mapping accessible forested regions.</li>
+                </ul>
+            </div>
+
+            <h2>How Does Lidar Work</h2>
+            <p>Lidar works by emitting laser pulses from a sensor mounted on an aircraft or ground-based device. These laser pulses interact with objects and the Earth's surface and then bounce back to the sensor. By precisely measuring the time it takes for the laser pulses to return, lidar can calculate the distance between the sensor and the objects or the ground surface.</p>
+            <p>Lidar creates a detailed 3D map of the surveyed area, including terrain, vegetation, buildings, and other objects. This data is valuable for various applications, including forestry (like estimating tree heights and canopy structure), urban planning, flood modeling, and more. Lidar technology provides highly accurate and detailed structural information, making it essential for many scientific and environmental studies.</p>
+			<br>
+            <h2>lidR</h2>
+			<div class="image-container">
+                <img src="../images/lidR.png" alt="lidR image" style="width:100%;">
+            </div>
+            <p>The <a href="https://cran.r-project.org/web/packages/lidR/lidR.pdf" target="_blank">lidR package</a> is a powerful open source package for processing and analyzing lidar data in R, with an focus on research and development for foresty and ecology applications. It provides a wide range of tools and functions for reading, processing, visualizing, and extracting information from lidar point cloud data. This package was developed and is maintained by <a href="https://github.com/Jean-Romain" target="_blank">Jean-Romain Roussel</a>.</p>
+			<p><strong>Note: </strong><em>Since 2024 r-lidar has transitioned into a company. While the lidR package will remain free and open source, <a href="https://www.r-lidar.com/" target="_blank">r-lidar</a> now offer independent services for training courses, consulting, and development.</em></p>
+			<p><em>Some key features and capabilities of lidR include:</em></p>
+			<div class="list-container">
+                <ul>
+					<li><strong>Data Import:</strong> lidR allows you to efficiently import and read lidar data in various formats, including las and laz.</li>
+					<li><strong>Data Visualization:</strong> You can visualize lidar point clouds in 3D using lidR, which helps in exploring and understanding the data.</li>
+					<li><strong>Filtering and Pre-Processing:</strong> The package offers functions for filtering and cleaning lidar data, removing noise, and classifying points based on attributes.</li>
+					<li><strong>Digital Terrain Model(DTM) Generation:</strong> lidR can be used to generate Digital Terrain Models from lidar data, which is essential for various applications.</li>
+					<li><strong>Canopy Height Model (CHM) Generation:</strong> It supports the creation of Canopy Height Models, which are useful for estimating forest attributes like tree height.</li>
+					<li><strong>Advanced Data Analysis:</strong> lidR provides tools for advanced dataanalysis, including extraction of individual tree information and spatial statistics.</li>
+					<li><strong>Forest Metrics:</strong> You can calculate a wide range of forest metrics, such as tree counts, canopy cover, and volume estimation, using lidR.</li>
+					<li><strong>Integration with Other R Packages:</strong> It can be seamlessly integrated with other R packages for statistical analysis and data visualization.</li>
+				</ul>
+			</div>
+			
+			<h2>Helpfull Resources for lidR</h2>
+			<div class="list-container">
+                <ul>
+					<li><a href="https://r-lidar.github.io/lidRbook/" target="_blank"><strong>lidR Book:</strong></a> Useful documentation and workflows for working with lidar data.</li>
+					<li><a href="https://gis.stackexchange.com/questions/tagged/lidr" target="_blank"><strong>lidR Stack Exchange:</strong></a> A forum of questions with answers related to the lidR package and its functions.</li>
+					<li><a href="https://tgoodbody.github.io/lidRtutorial/" target="_blank"><strong>lidR Tutorial:</strong></a> An online tutorial of how to process data in lidR.</li>
+					<li><a href="https://github.com/r-lidar/lidR" target="_blank"><strong>lidR GitHub:</strong></a> The GitHub repo for the lidR package. New functions/code may be updated here prior to on CRAN.</li>
+					<li><a href="https://doi.org/10.1016/j.rse.2020.112061" target="_blank"><strong>Original Publication:</strong></a> The original publication from <em>Remote Sensing of Environment.<em></li>
+				</ul>
+			</div>
+        </div>
+    </div>
+</body>
+</html>
