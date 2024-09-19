@@ -46,6 +46,67 @@
         .navbar a:hover {
             background-color: #0f6586;
         }
+		.dropdown {
+			position: relative;
+			display: inline-block;
+		}
+
+		/* Dropdown button */
+		.dropdown .dropbtn {
+			background-color: #158cba;
+			color: white;
+			padding: 10px 20px;
+			font-size: 18px;
+			border: none;
+			cursor: pointer;
+			border-radius: 5px; /* Rounded corners */
+		}
+
+		.dropdown .dropbtn::after {
+			content: " ▼"; /* Down arrow symbol */
+			font-size: 10px;
+			margin-left: 5px; /* Add some space between the text and arrow */
+		}
+
+		.dropdown:hover .dropbtn {
+			background-color: #0f6586;
+		}
+
+		/* Dropdown content (hidden by default) */
+		.dropdown-content {
+			position: absolute;
+			background-color: #0f6586;
+			min-width: 160px;
+			box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+			z-index: 1;
+			border-radius: 5px; /* Rounded corners */
+			margin-top: 5px; /* Space between button and dropdown */
+			opacity: 0; /* Make it invisible initially */
+			max-height: 0; /* Initially hidden height */
+			overflow: hidden; /* Hide content when collapsed */
+			transform: translateY(-10px); /* Initial slide-up position */
+			transition: all 0.3s ease; /* Transition for opacity, max-height, and transform */
+		}
+
+		/* Links inside the dropdown */
+		.dropdown-content a {
+			color: white;
+			padding: 12px 16px;
+			text-decoration: none;
+			display: block;
+			text-align: left;
+		}
+
+		.dropdown-content a:hover {
+			color: #d3d3d3;
+		}
+
+		/* Show the dropdown menu on hover */
+		.dropdown:hover .dropdown-content {
+			opacity: 1; /* Fade-in effect */
+			max-height: 200px; /* Dropdown height (adjust as needed) */
+			transform: translateY(0); /* Slide down effect */
+		}
 		.main-content {
 			margin-top: 100px;
 			padding: 20px 40px;
@@ -123,6 +184,12 @@
         <a href="resume.html">Work Experience</a>
         <a href="publications.html">Publications</a>
         <a href="awards.html">Awards</a>
+		<div class="dropdown">
+            <button class="dropbtn">Content</button>
+            <div class="dropdown-content">
+                <a href="content/lidartools.html">Lidar Tools</a>
+			</div>
+		</div>
     </div>
     <div class="main-content">
         <div class="content">
