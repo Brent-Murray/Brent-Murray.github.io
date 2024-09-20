@@ -165,7 +165,7 @@
 		.toc-content {
 			display: none; /* Initially hidden */
 			position: absolute;
-			top: 40px;
+			top: 38px;
 			right: 0;
 			width: 200px;
 			background-color: #fff;
@@ -195,6 +195,11 @@
 		.content {
 			max-width: 1200px;
 			margin: 0 auto;
+		}
+		
+		.section {
+			padding-top: 150px;
+			margin-top: -150px;
 		}
 
 		p {
@@ -276,6 +281,9 @@
 			.dropdown .dropbtn {
 				font-size: 16px;
 			}
+			.video-container {
+				max-width: 70%; /* Full width on smaller screens */
+			}
 		}
 
 		@media (max-width: 480px) {
@@ -317,15 +325,23 @@
             <a href="#section3">How Does Lidar Work</a>
             <a href="#section4">The lidR Package</a>
             <a href="#section5">Helpful Resources for lidR</a>
+			<a href="#sectoin6">Visualizing Point Clouds</a>
         </div>
     </div>
 	
     <div class="main-content">
         <div class="content">
-            <h1 id="section1">Lidar Tools and Workflows</h1>
-            <p>Lidar, short for <strong>light detection and ranging</strong>, is a remote sensing technology used to <strong>measure distances</strong> and create detailed 3D maps of objects and landscapes. It works by sending out <strong>laser pulses and measuring the time</strong> it takes for these pulses to bounce back after hitting a target. By collecting these <strong>distance measurements</strong> from many laser pulses, lidar can create highly accurate and precise models of the <strong>shape and elevation</strong> of the Earth's surface. In the context of forestry, lidar is valuable for <strong>mapping and assessing forests</strong>, including estimating tree heights and canopy structures.</p>
-            <br>
-            <h2 id="section2">Types of Lidar Systems</h2>
+            <h1 id="section1", class="section">Lidar Tools and Workflows</h1>
+			<div class="video-container" style="float: right; width: 100%; max-width: 400px; height: 100%; max-height: 900px; overflow: hidden; margin-left: 20px;">
+				<video style="width: 150%; height: 120%; margin-bottom: -70%; transform: translate(-17%, -20%);" autoplay loop muted>
+					<source src="../images/pointcloud.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+			</div>
+			<p>Lidar, short for <strong>light detection and ranging</strong>, is a remote sensing technology used to <strong>measure distances</strong> and create detailed 3D maps of objects and landscapes. It works by sending out <strong>laser pulses and measuring the time</strong> it takes for these pulses to bounce back after hitting a target. By collecting these <strong>distance measurements</strong> from many laser pulses, lidar can create highly accurate and precise models of the <strong>shape and elevation</strong> of the Earth's surface. In the context of forestry, lidar is valuable for <strong>mapping and assessing forests</strong>, including estimating tree heights and canopy structures.</p>
+			<br>
+			
+            <h2 id="section2", class="section">Types of Lidar Systems</h2>
             <p>There are a few different types of lidar systems each serving a unique purpose, allowing researchers to select the most suitable technology for their specific purpose.</p>
 
             <!-- Wrapped the list in a container with a background and border -->
@@ -338,11 +354,11 @@
                 </ul>
             </div>
 
-            <h2 id="section3">How Does Lidar Work</h2>
+            <h2 id="section3", class="section">How Does Lidar Work</h2>
             <p>Lidar works by emitting laser pulses from a sensor mounted on an aircraft or ground-based device. These laser pulses interact with objects and the Earth's surface and then bounce back to the sensor. By precisely measuring the time it takes for the laser pulses to return, lidar can calculate the distance between the sensor and the objects or the ground surface.</p>
             <p>Lidar creates a detailed 3D map of the surveyed area, including terrain, vegetation, buildings, and other objects. This data is valuable for various applications, including forestry (like estimating tree heights and canopy structure), urban planning, flood modeling, and more. Lidar technology provides highly accurate and detailed structural information, making it essential for many scientific and environmental studies.</p>
 			<br>
-            <h2 id="section4">The lidR Package</h2>
+            <h2 id="section4", class="section">The lidR Package</h2>
 			<div class="image-container">
                 <img src="../images/lidR.png" alt="lidR image" style="width:100%;">
             </div>
@@ -362,14 +378,38 @@
 				</ul>
 			</div>
 			
-			<h2 id="section5">Helpfull Resources for lidR</h2>
+			<h2 id="section5", class="section">Helpfull Resources for lidR</h2>
 			<div class="list-container">
                 <ul>
 					<li><a href="https://r-lidar.github.io/lidRbook/" target="_blank"><strong>lidR Book:</strong></a> Useful documentation and workflows for working with lidar data.</li>
 					<li><a href="https://gis.stackexchange.com/questions/tagged/lidr" target="_blank"><strong>lidR Stack Exchange:</strong></a> A forum of questions with answers related to the lidR package and its functions.</li>
 					<li><a href="https://tgoodbody.github.io/lidRtutorial/" target="_blank"><strong>lidR Tutorial:</strong></a> An online tutorial of how to process data in lidR.</li>
 					<li><a href="https://github.com/r-lidar/lidR" target="_blank"><strong>lidR GitHub:</strong></a> The GitHub repo for the lidR package. New functions/code may be updated here prior to on CRAN.</li>
-					<li><a href="https://doi.org/10.1016/j.rse.2020.112061" target="_blank"><strong>Original Publication:</strong></a> The original publication from <em>Remote Sensing of Environment.<em></li>
+					<li><a href="https://doi.org/10.1016/j.rse.2020.112061" target="_blank"><strong>Original Publication:</strong></a> The original publication from <em>Remote Sensing of Environment.</em></li>
+				</ul>
+			</div>
+			
+			<h2 id="section6" class="section">Visualizing Point Clouds</h2>
+			<p>There are two sfotware that I recommend for visualizing lidar point clouds: </p>
+			<div class="list-container">
+				<ul>
+					<li>
+						<a href="https://www.danielgm.net/cc/" target="_blank">
+							<strong>CloudCompare</strong>
+						</a>
+						<div style="display: flex; align-items: center;">
+							<span style="margin-left: 1px;">A 3D point cloud processing software. Not only can you visualize point clouds using this software, but you can also perform various processing and analysis algorithms as well.</span>
+							<img src="../images/cloudcompare.png" alt="CloudCompare image" style="width: 100px; height: auto; margin-left: 8px;">
+						</div>
+					</li>
+					<li>
+						<a href="https://github.com/potree/potree/" target="_blank">
+							<strong>Potree</strong>
+						</a>
+						<div style="display: flex; align-items: center;">
+							<span style="margin-left: 1px;">A free open source WebGL based point cloud renderer for large point clouds. This software is available to download from their GitHub (link above).</span>
+							<img src="../images/github-icon.png" alt="GitHub Icon" style="width: 100px; height: auto; margin-left: 8px;">
+					</li>
 				</ul>
 			</div>
         </div>
