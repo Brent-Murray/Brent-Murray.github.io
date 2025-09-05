@@ -248,14 +248,17 @@
         <img src="images/20221202-DSC_1277-Edit.jpg" alt="Brent Murray" class="profile-picture">
 		<div class="profile-name">Brent Murray</div>
         <div class="social-links">
-            <a href="https://x.com/BrentAMurray" target="_blank">
-                <img src="images/x-icon.png" alt="X">
+            <a href="https://bsky.app/profile/did:plc:euccaxiydh6qgkadl4bfvwg4" target="_blank">
+                <img src="images/bluesky-icon.png" alt="Bluesky">
             </a>
             <a href="https://ca.linkedin.com/in/brent-murray-8646141a5" target="_blank">
                 <img src="images/linkedin-icon.png" alt="LinkedIn">
             </a>
             <a href="https://orcid.org/0000-0003-3053-9448" target="_blank">
                 <img src="images/orcid-icon.png" alt="ORCID">
+            </a>
+			<a href="https://www.researchgate.net/profile/Brent-Murray-4/research" target="_blank">
+                <img src="images/researchgate-icon.png" alt="Research Gate">
             </a>
             <a href="https://github.com/Brent-Murray" target="_blank">
                 <img src="images/github-icon.png" alt="GitHub">
@@ -289,25 +292,27 @@
             <div class="publication">
                 <h2>Recent Publications</h2>
                 <div class="publication-grid">
-                    <div class="publication-item">
-                        <h3><a href="https://arxiv.org/pdf/2408.06507" target="_blank">Benchmarking tree species classification from proximally-sensed laser scanning data: introducing the FOR-species20K dataset</a></h3>
-						<p>Stefano Puliti, Emily R. Lines, Jana Müllerová, Julian Frey, Zoe Schindler, Adrian Straker, Matthew J. Allen, Lukas Winiwarter, Nataliia Rehush, Hristina Hristova, <strong>Brent Murray</strong>, Kim Calders, Louise Terryn, Nicholas Coops, Bernhard Höfle, Samuli Junttila, Martin Krůček, Grzegorz Krok, Kamil Král, Shaun R. Levick, Linda Luck, Azim Missarov, Martin Mokroš, Harry J. F. Owen, Krzysztof Stereńczak, Timo P. Pitkänen, Nicola Puletti, Ninni Saarinen, Chris Hopkinson, Chiara Torresan, Enrico Tomelleri, Hannah Weiser, Rasmus Astrup</p>
+				
+					<div class="publication-item">
+                        <h3><a href="https://doi.org/10.1080/01431161.2025.2521072" target="_blank">Tree species proportion prediction using airborne laser scanning and Sentinel-2 data within a deep learning based dual-stream data fusion approach</a></h3>
+						<p><strong>Brent A. Murray</strong>, Nicholas C. Coops, Joanne C. White, Adam Dick, Ahmed Ragab</p>
 						<div class="abstract">
 							<p><strong>Abstract</strong></p>
-							<p>Proximally-sensed laser scanning offers significant potential for automated forest data capture, but challenges remain in automatically identifying tree species without additional ground data. Deep learning (DL) shows promise for automation, yet progress is slowed by the lack of large, diverse, openly available labeled datasets of single tree point clouds. This has impacted the robustness of DL models and the ability to establish best practices for species classification.</p>
-							<p>To overcome these challenges, the FOR-species20K benchmark dataset was created, comprising over 20,000 tree point clouds from 33 species, captured using terrestrial (TLS), mobile (MLS), and drone laser scanning (ULS) across various European forests, with some data from other regions. This dataset enables the benchmarking of DL models for tree species classification, including both point cloud-based (PointNet++, MinkNet, MLP-Mixer, DGCNNs) and multi-view image-based methods (SimpleView, DetailView, YOLOv5).</p>
-							<p>2D image-based models generally performed better (average OA = 0.77) than 3D point cloud-based models (average OA = 0.72), with consistent results across different scanning platforms and sensors. The top model, DetailView, was particularly robust, handling data imbalances well and generalizing effectively across tree sizes.</p>
-							<p>The FOR-species20K dataset, available at this <a href="https://zenodo.org/records/13255198" target="_blank">URL</a>, is a key resource for developing and benchmarking DL models for tree species classification using laser scanning data, providing a foundation for future advancements in the field.</p>
-						</div>
-					</div>
-                    <div class="publication-item">
-                        <h3><a href="https://www.sciencedirect.com/science/article/pii/S0924271623003453" target="_blank">Estimating tree species composition from airborne laser scanning data using point-based deep learning models</a></h3>
-						<p><strong>Brent A. Murray</strong>, Nicholas C. Coops, Lukas Winiwarter, Joanne C. White, Adam Dick, Ignacio Barbeito, Ahmed Ragab</p>
-						<div class="abstract">
-							<p><strong>Abstract</strong></p>
-							<p>Airborne laser scanning (ALS) data is increasingly being used for accurate estimations of forest inventory attributes, such as tree height and volume. However, determining tree species information, an important attribute required by inventories for a range of forest management applications, is challenging to extract from ALS data. This is due to complex species assemblages and vertical structures in certain forest environments, and a lack of spectral information for most ALS sensors. Our objective was to estimate tree species compositions in a Canadian boreal forest environment using ALS data and point-based deep learning techniques. To accomplish this, we utilised existing polygonal forest resource information to develop a large comprehensive dataset of tree species compositions across a 630,000 ha forest management area. We then used an adapted PointAugment generative adversarial network (GAN) coupled with the dynamic graph convolutional neural network to estimate tree species proportions. This innovative deep learning approach resulted in an overall R2adj of 0.61 for all tree species proportions. A weighted F1 score of 63% was observed when classifying the leading species of a plot, 66% for leading genus, and 85% when distinguishing between coniferous and deciduous dominated plots. Furthermore, the PointAugment GAN successfully generated augmented point clouds of forest plots which can alleviate issues associated with limited training samples for use in deep learning. This approach demonstrates the capability of point-based deep learning techniques to accurately estimate tree species compositions from ALS point clouds within an expansive forested region, characterized by a complex management history and a diversity of tree species. The source code along with the pretrained models are available at <a href="https://github.com/Brent-Murray/point-dl/tree/main/Pytorch/models/PointAugment" target="_blank">https://github.com/Brent-Murray/point-dl/tree/main/Pytorch/models/PointAugment</a>.</p>
+							<p>The integration of airborne laser scanning (ALS) technology into forest inventory practices has significantly improved forest management by providing accurate predictions of forest structural attributes. However, ALS offers limited insight into the spectral properties of tree crowns, hindering the accurate prediction of various physiological attributes and the identification of tree species. The fusion of multitemporal spectral information with ALS data has been proposed as an important step towards addressing this limitation. While previous studies have explored combining ALS with optical data for forest species mapping, the fusion process often requires feature generation and selection, which restrict the scalability and effectiveness of these approaches. There remains a need for an approach that effectively leverages both the structural information of ALS and spectral dynamics of optical imagery in a fully data-driven manner. We propose a novel dual-stream deep learning approach that fuses ALS point-cloud data with multitemporal Sentinel-2 (S2) imagery to predict the proportions of seven species and two genera across a 630,000 ha Canadian boreal forest, capturing both structural and spectral features within 20 m grid  cells. The results showed an R2 of 0.58 and an RMSE of 0.14 for all proportional values, with an 8% increase in accuracy for the detection of broadleaf species when using seasonal multispectral images,  compared to using ALS data alone. Additionally, lower R2 values (0.49–0.57) were observed only when the S2 imagery was used. When identifying the leading species from the model predictions, a weighted F1 score of 0.62 and an overall accuracy of 0.65 were achieved for the seven species and two genera. This research highlights the potential of deep learning and data fusion to advance forest inventory practices by offering a scalable and reproducible method for detailed mapping of species proportions.</p>
 						</div>
                     </div>
+					
+                    <div class="publication-item">
+                        <h3><a href="https://doi.org/10.1111/2041-210X.14503" target="_blank">Benchmarking tree species classification from proximally-sensed laser scanning data: introducing the FOR-species20K dataset</a></h3>
+						<p>Stefano Puliti, Emily R. Lines, Jana Müllerová, Julian Frey, Zoe Schindler, Adrian Straker, Matthew J. Allen, Lukas Winiwarter, Nataliia Rehush, Hristina Hristova, <strong>Brent Murray</strong>, Kim Calders, Nicholas Coops, Bernhard Höfle, Liam Irwin, Samuli Junttila, Martin Krůček, Grzegorz Krok, Kamil Král, Shaun R. Levick, Linda Luck, Azim Missarov, Martin Mokroš, Harry J. F. Owen, Krzysztof Stereńczak, Timo P. Pitkänen, Nicola Puletti, Ninni Saarinen, Chris Hopkinson, Louise Terryn, Chiara Torresan, Enrico Tomelleri, Hannah Weiser, Rasmus Astrup</p>
+						<div class="abstract">
+							<p><strong>Abstract</strong></p>
+							<p>Proximally sensed laser scanning presents new opportunities for automated  forest ecosystem data capture. However, a gap remains in deriving ecologically  pertinent information, such as tree species, without additional ground data.  Artificial intelligence approaches, particularly deep learning (DL), have shown  promise towards automation. Progress has been limited by the lack of large,  diverse, and, most importantly, openly available labelled single-tree point cloud  datasets. This has hindered both (1) the robustness of the DL models across  varying data types (platforms and sensors) and (2) the ability to effectively track  progress, thereby slowing the convergence towards best practice for species  classification.</p>
+							<p>o address the above limitations, we compiled the FOR-species20K benchmark  dataset, consisting of individual tree point clouds captured using proximally  sensed laser scanning data from terrestrial (TLS), mobile (MLS) and drone laser  scanning (ULS). Compiled collaboratively, the dataset includes data collected in  forests mainly across Europe, covering Mediterranean, temperate and boreal  biogeographic regions. It includes scattered tree data from other continents,  totaling over 20,000 trees of 33 species and covering a wide range of tree sizes  and forms. Alongside the release of FOR-species20K, we benchmarked seven leading DL models for individual tree species classification, including both point  cloud (PointNet++, MinkNet, MLP-Mixer, DGCNNs) and multi-view 2D-based  methods (SimpleView, DetailView, YOLOv5).</p>
+							<p>2D Image-based models had, on average, higher overall accuracy (0.77) than  3D point cloud-based models (0.72). Notably, the performance was consistently  >0.8 across scanning platforms and sensors, offering versatility in deployment.  The top-scoring model, DetailView, demonstrated robustness to training data  imbalances and effectively generalized across tree sizes.</p>
+							<p>The FOR-species20K dataset represents an important asset for developing and  benchmarking DL models for individual tree species classification using proximally  sensed laser scanning data. As such, it serves as a crucial foundation for future  efforts to classify accurately and map tree species at various scales using laser  scanning technology, as it provides the complete code base, dataset, and an initial  baseline representative of the current state-of-the-art of point cloud tree species  classification methods.</p>
+						</div>
+					</div>
                 </div>
             </div>
         </div>
